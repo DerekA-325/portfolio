@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+	<html>
+		<!-- page2ss.html -->
+		<head>
+			<title>Derek Avery, Trip Summary</title>
+			<meta charset="utf-8" />
+		</head>
+		<body>
+			<header>
+				<h1>Derek Avery, Trip Summary</h1>
+			</header>
+			<article>
+				<p id="tripName"></p>
+				<p id="totalMiles"></p>
+				<p id="gallonsUsed"></p>
+				<p id="fuelEcon"></p>
+				
+				<script>
+					const trip = sessionStorage.getItem("tripBox");
+					const gallons = sessionStorage.getItem("gallonsUsed");
+					const miles = sessionStorage.getItem("miles");
+					const mpg = sessionStorage.getItem("mpg");
+						
+					if(trip) {
+						document.getElementById("tripName").innerText = "Trip Name: " + trip;
+					}
+					if(miles) {
+						document.getElementById("totalMiles").innerText = "Total Miles Traveled" + miles;
+					}
+					if(gallons) {
+						document.getElementById("gallonsUsed").innerText = "Gallons of Gas Consumed: " + gallons;
+					}
+					if(mpg) {
+						document.getElementById("fuelEcon").innerText = "Fuel Economy (MPG) for Trip: " + mpg;
+					}
+				</script>
+			</article>
+		</body>
+	</html>

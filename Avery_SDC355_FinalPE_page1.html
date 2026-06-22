@@ -1,0 +1,45 @@
+<!--
+	Name: Derek Avery
+	Date: July 27, 2025
+	Assignment: SDC355 Final Practical Exam
+-->
+<!DOCTYPE html>
+<html>
+	<!-- Page 1 -->
+	<head>
+		<title>FInal Exam PE</title>
+	</head>
+	<body>
+		<header>
+			<h1>Derek Avery, Trip Stats Calculator</h1>
+		</header>
+		<article>
+			<label for="tripBox">Trip Name: </label>
+			<input type="text" id="tripBox" /><br />
+			<label for="startingMileage">Starting Mileage: </label>
+			<input type="text" id="startingMileage" /><br />
+			<label for="endingMileage">Ending Mileage: </label>
+			<input type="text" id="endingMileage" /><br />
+			<label for="gallonsUsed">Gallons of Gas Used</label>
+			<input type="text" id="gallonsUsed" /><br />
+			<button onclick="getSummary()">Get Trip Summary</button>
+		</article>
+		<script>
+			function getSummary() {
+					const trip = document.getElementById("tripBox").value;
+					const start = document.getElementById("startingMileage").value;
+					const end = document.getElementById("endingMileage").value;
+					const gallons = document.getElementById("gallonsUsed").value;
+					const miles = end - start;
+					const mpg = miles / gallons;
+					
+					sessionStorage.setItem("tripBox", trip);
+					sessionStorage.setItem("gallonsUsed", gallons);
+					sessionStorage.setItem("miles", miles);
+					sessionStorage.setItem("mpg", mpg);
+					
+					location.href = "Avery_SDC355_FinalPE_page2.html";
+				} // end of function 
+		</script>
+	</body>
+</html>

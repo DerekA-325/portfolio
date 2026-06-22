@@ -1,0 +1,12 @@
+{
+    "author": ["Davery"],
+    "description": "Retrieves user stats (Join Date, Points, Raids, etc.) from a private Google Sheet using Discord IDs.",
+    "disabled": false,
+    "hidden": false,
+    "install_msg": "Cog installed! Ensure your 'service_account.json' is placed inside the 'sheetreader' folder and the Google Sheet is shared with the client email found inside that JSON.",
+    "name": "MyCog",
+    "requirements": ["gspread"],
+    "short": "Google Sheets user data reader",
+    "tags": ["utility", "sheets", "stats"],
+    "type": "COG"
+}
